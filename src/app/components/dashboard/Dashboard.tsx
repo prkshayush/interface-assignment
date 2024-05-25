@@ -48,8 +48,10 @@ export default function Dashboard() {
         },
     ]
     return (
-        <div className="border border-gray-light rounded-sm flex flex-col">
+        <div className="border-t border-x border-gray-light min-h-screen rounded-sm flex flex-col">
             <div className="flex flex-col gap-3">
+
+                {/* top section */}
                 <div className="flex items-center justify-between px-8 pt-5">
                     <p className="font-semibold">Overview</p>
                     <div className="flex gap-1">
@@ -58,35 +60,40 @@ export default function Dashboard() {
                     </div>
                 </div>
 
+                {/* chart section */}
                 <div className="flex items-center justify-between px-8 py-5 gap-10">
-                    <div className="flex flex-col gap-5">
+                    {/* cost section */}
+                    <div className="flex-1 flex flex-col justify-center gap-5 px-10">
                         <Canvas name="Cost Optimised" value="$7,265" percentage={11.02} />
                         <Canvas name="Workflows Automated" value="1,321" percentage={18.04} />
                     </div>
-                    <div className="bg-gradient-to-r from-white-shade font-semibold border p-3 rounded-lg border-gray-light min-w-[26rem] min-h-42 cursor-pointer">
-                        <div className="flex items-center gap-3 mb-3 text-sm">
-                            {random.map((rand =>
-                                <p key={rand.id} className="text-gray-dark hover:text-black">{rand.name}</p>
-                            ))} |
-                            <div className="flex items-center pl-5 gap-5">
-                                <li>This year</li>
-                                <li className="text-gray-dark hover:text-black">Last year</li>
+                    <div className="flex-1 flex items-center justify-center">
+                        <div className="bg-gradient-to-r from-white-shade font-semibold border p-3 rounded-lg border-gray-light w-[35rem] h-72 cursor-pointer">
+                            <div className="flex items-center gap-2 mb-3 ml-2 text-xs">
+                                {random.map((rand =>
+                                    <p key={rand.id} className="text-gray-dark hover:text-black">{rand.name}</p>
+                                ))} |
+                                <div className="flex items-center pl-5 gap-5">
+                                    <li>This year</li>
+                                    <li className="text-gray-dark hover:text-black">Last year</li>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <Image src='/chart.png' alt="" width={700} height={512} />
+                            <div className="min-h-68">
+                                <Image src='/chart.png' alt="" width={700} height={512} />
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="flex justify-between items-center gap-10 p-8">
+            {/* profiles section */}
+            <div className="flex justify-center items-center gap-32 pb-2 px-16">
                 {profiles.map((profile =>
-                    <div className="rounded-lg border border-gray-light bg-gradient-to-br from-white-shade min-h-80 min-w-64 flex items-center justify-center flex-col font-semibold" key={profile.id}>
+                    <div className="rounded-lg border border-gray-light bg-gradient-to-br from-white-shade min-h-64 min-w-56 flex items-center justify-center flex-col font-semibold" key={profile.id}>
                         <div><Image className="rounded-full bg-white drop-shadow-4xl m-2" src={profile.url} alt="" width={50} height={50} /></div>
                         <div><p className="text-3xl">{profile.name}</p></div>
                         <div className="text-sm">{profile.desc}</div>
-                        <button className="bg-btn-col rounded-md p-3 text-sm my-8 text-gray-light">Get Started</button>
+                        <button className="bg-btn-col rounded-md p-3 text-sm mt-10 text-gray-light">Get Started</button>
                     </div>
                 ))}
             </div>

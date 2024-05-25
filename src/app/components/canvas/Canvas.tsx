@@ -7,7 +7,7 @@ type CanvasProps = {
 }
 export default function Canvas({ name, value, percentage }: CanvasProps) {
     return (
-        <div className="bg-gradient-to-r from-white-shade font-semibold border py-8 rounded-lg px-5 border-gray-light flex flex-col justify-center min-w-[23rem] min-h-40 cursor-pointer">
+        <div className="bg-gradient-to-r from-white-shade font-semibold border py-8 rounded-lg px-5 border-gray-light flex flex-col justify-center min-w-72 min-h-32 cursor-pointer">
             <div className="text-lg">{name}</div>
             <div className="flex items-center justify-between">
                 <p className="text-2xl">{value}</p>

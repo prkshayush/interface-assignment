@@ -97,21 +97,23 @@ export default function SideBar() {
         <div className="p-5">
             <p className="py-2 font-semibold text-2xl text-left text-btn-col">interface</p>
 
-            <div className="flex flex-col">
-                <div className="flex flex-col my-5">
+
+            <div className="flex flex-col gap-5">
+                {/* dashboard options */}
+                <div className="flex flex-col">
                     {links.map(link => (
-                        <button key={link.id} className="flex items-center py-2 rounded-lg hover:bg-btn-col hover:text-txt-col-hov">
+                        <button key={link.id} className="flex items-center py-1 rounded-lg hover:bg-btn-col hover:text-txt-col-hov">
                             <Image src={link.link} alt="empty" className="m-2" width={18} height={18} />
-                            <p className="text-[0.9rem] px-2">{link.name}</p>
+                            <p className="text-[0.9rem] pr-1">{link.name}</p>
                         </button>
 
                     ))}
                 </div>
-                <div className="flex flex-col my-5">
+                <div className="flex flex-col">
                     {setings.map(setting => (
-                        <button key={setting.id} className="flex items-center py-2 rounded-lg hover:bg-btn-col hover:text-txt-col-hov">
+                        <button key={setting.id} className="flex items-center py-1 rounded-lg hover:bg-btn-col hover:text-txt-col-hov">
                             <Image src={setting.url} alt="empty" className="m-2" width={18} height={18} />
-                            <p className="text-[0.9rem] px-2">{setting.name}</p>
+                            <p className="text-[0.9rem]">{setting.name}</p>
                         </button>
 
                     ))}

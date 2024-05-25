@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NavBar() {
     return (
-        <div className="flex items-center justify-between border-b border-gray-light px-6 py-3">
+        <div className="flex items-center justify-between border-b border-gray-light px-4 py-3">
             <Image src="/navicon.svg" alt="logo" width={17} height={14} />
             <button className="text-btn-col text-base font-semibold">Dashboard</button>
 
