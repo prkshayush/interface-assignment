@@ -1,4 +1,4 @@
-### Check it out here [https://getinterface.vercel.app/](getinterface.vercel.app)
+### Check it out here [getinterface](https://getinterface.vercel.app/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
